@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-10-22 21:19:14.790134",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "chemical_name",
+  "active_ingredient",
+  "quantity_used",
+  "unit_of_measure",
+  "batch_no",
+  "targeted_pest"
+ ],
+ "fields": [
+  {
+   "fieldname": "chemical_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Chemical / Pesticide Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "active_ingredient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Active Ingredient"
+  },
+  {
+   "fieldname": "quantity_used",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity Used",
+   "reqd": 1
+  },
+  {
+   "default": "ml",
+   "fieldname": "unit_of_measure",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "ml\nLitre\ngrams\nkg\nBait Stations"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Batch No"
+  },
+  {
+   "fieldname": "targeted_pest",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Targeted Pest"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-22 21:19:14.790134",
+ "modified_by": "Administrator",
+ "module": "Pest Control",
+ "name": "Pest Chemical Consumable",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

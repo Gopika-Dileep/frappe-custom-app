@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{customer}-{site_name}",
+ "creation": "2026-10-22 21:19:15.219444",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "site_name",
+  "customer",
+  "customer_name",
+  "site_type",
+  "contact_person",
+  "contact_phone",
+  "city",
+  "site_address",
+  "area_sqft",
+  "pest_risk_level",
+  "special_safety_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site / Facility Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "default": "Commercial Office",
+   "fieldname": "site_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Site Type",
+   "options": "Commercial Office\nResidential Villa / Flat\nFood & Beverage / Restaurant\nHealthcare / Hospital\nIndustrial / Warehouse\nShopping Mall"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Contact Person"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "default": "Kochi",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City"
+  },
+  {
+   "fieldname": "site_address",
+   "fieldtype": "Small Text",
+   "label": "Site Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area_sqft",
+   "fieldtype": "Float",
+   "label": "Total Area (Sq Ft)"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "pest_risk_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Pest Risk Level",
+   "options": "Low\nMedium\nHigh\nCritical - Food Safety"
+  },
+  {
+   "fieldname": "special_safety_notes",
+   "fieldtype": "Small Text",
+   "label": "Safety Instructions"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-22 21:19:15.219444",
+ "modified_by": "Administrator",
+ "module": "Pest Control",
+ "name": "Pest Control Site",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

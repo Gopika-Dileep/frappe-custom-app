@@ -1,0 +1,199 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"hdr_1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Live Operational Summary</b></span>\", \"col\": 12}}, {\"id\": \"nc_1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Scheduled Jobs\", \"col\": 3}}, {\"id\": \"nc_2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Completed Jobs\", \"col\": 3}}, {\"id\": \"nc_3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active AMC Contracts\", \"col\": 3}}, {\"id\": \"nc_4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Certified Technicians\", \"col\": 3}}, {\"id\": \"spc_1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_2\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Operations &amp; Dispatch Shortcuts</b></span>\", \"col\": 12}}, {\"id\": \"sc_1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Work Orders\", \"col\": 3}}, {\"id\": \"sc_2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Manpower Allocation\", \"col\": 3}}, {\"id\": \"sc_3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Service Contracts\", \"col\": 3}}, {\"id\": \"sc_4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Client Sites\", \"col\": 3}}, {\"id\": \"spc_2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"hdr_3\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Modules &amp; Masters</b></span>\", \"col\": 12}}, {\"id\": \"cd_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Operations\", \"col\": 4}}, {\"id\": \"cd_2\", \"type\": \"card\", \"data\": {\"card_name\": \"Contracts & CRM\", \"col\": 4}}, {\"id\": \"cd_3\", \"type\": \"card\", \"data\": {\"card_name\": \"HR & Manpower Masters\", \"col\": 4}}]",
+ "creation": "2026-10-22 21:23:26.936782",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "shield",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Pest Control & FM",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operations",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pest Work Order",
+   "link_count": 0,
+   "link_to": "Pest Work Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Manpower Allocation",
+   "link_count": 0,
+   "link_to": "Manpower Allocation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pest Control Site",
+   "link_count": 0,
+   "link_to": "Pest Control Site",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Daily Deployment Schedule",
+   "link_count": 0,
+   "link_to": "Daily Manpower Deployment",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contracts & CRM",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pest Control Contract",
+   "link_count": 0,
+   "link_to": "Pest Control Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Accounts",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "HR & Manpower Masters",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Field Technicians",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Technician Leave Records",
+   "link_count": 0,
+   "link_to": "Leave Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Service Types & Rates",
+   "link_count": 0,
+   "link_to": "Service Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-10-23 19:24:16.171109",
+ "modified_by": "Administrator",
+ "module": "Pest Control",
+ "name": "Pest Control & FM",
+ "number_cards": [
+  {
+   "number_card_name": "Scheduled Jobs"
+  },
+  {
+   "number_card_name": "Completed Jobs"
+  },
+  {
+   "number_card_name": "Active AMC Contracts"
+  },
+  {
+   "number_card_name": "Certified Technicians"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Work Orders",
+   "link_to": "Pest Work Order",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Manpower Allocation",
+   "link_to": "Manpower Allocation",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "",
+   "label": "Service Contracts",
+   "link_to": "Pest Control Contract",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Client Sites",
+   "link_to": "Pest Control Site",
+   "type": "DocType"
+  }
+ ],
+ "title": "Pest Control & FM"
+}
