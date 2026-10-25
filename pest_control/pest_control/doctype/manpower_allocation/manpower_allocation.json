@@ -16,6 +16,7 @@
   "service_type",
   "allocation_date",
   "time_slot",
+  "allow_holiday_work",
   "role",
   "status",
   "checkin_time",
@@ -99,6 +100,12 @@
    "read_only": 1
   },
   {
+   "default": "0",
+   "fieldname": "allow_holiday_work",
+   "fieldtype": "Check",
+   "label": "Permit Allocation on Company Holiday / Weekly Off"
+  },
+  {
    "default": "Lead Technician",
    "fieldname": "role",
    "fieldtype": "Select",
@@ -144,7 +151,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-10-22 21:19:44.998250",
+ "modified": "2026-10-26 01:13:00.000000",
  "modified_by": "Administrator",
  "module": "Pest Control",
  "name": "Manpower Allocation",

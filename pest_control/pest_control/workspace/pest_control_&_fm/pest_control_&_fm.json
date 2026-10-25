@@ -131,6 +131,39 @@
    "dependencies": "",
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Company Holiday Calendar",
+   "link_count": 0,
+   "link_to": "Holiday List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Shift Assignments",
+   "link_count": 0,
+   "link_to": "Shift Assignment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Technician Attendance",
+   "link_count": 0,
+   "link_to": "Attendance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Service Types & Rates",
    "link_count": 0,
    "link_to": "Item",
@@ -139,7 +172,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-10-26 01:05:34.148634",
+ "modified": "2026-10-26 01:16:57.870591",
  "modified_by": "Administrator",
  "module": "Pest Control",
  "name": "Pest Control & FM",
