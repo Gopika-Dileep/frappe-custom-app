@@ -172,7 +172,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-10-27 09:55:49.630173",
+ "modified": "2026-10-27 11:28:47.238686",
  "modified_by": "Administrator",
  "module": "Pest Control",
  "name": "Pest Control & FM",
@@ -200,6 +200,21 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "Pest Control Technician"
+  },
+  {
+   "role": "Pest Control Dispatcher"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "HR User"
   }
  ],
  "sequence_id": 0.0,
