@@ -166,13 +166,13 @@
    "is_query_report": 0,
    "label": "Service Types & Rates",
    "link_count": 0,
-   "link_to": "Item",
+   "link_to": "Service Type",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2026-10-26 01:16:57.870591",
+ "modified": "2026-10-27 09:55:49.630173",
  "modified_by": "Administrator",
  "module": "Pest Control",
  "name": "Pest Control & FM",
