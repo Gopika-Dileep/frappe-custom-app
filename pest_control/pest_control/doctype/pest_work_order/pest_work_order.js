@@ -101,18 +101,19 @@ function open_allocation_dialog(frm) {
             ];
 
             techs.forEach((t, idx) => {
+                const safe_id = t.employee.replace(/[^a-zA-Z0-9_]/g, '_');
                 dialog_fields.push({
-                    fieldname: `select_${t.employee}`,
+                    fieldname: `select_${safe_id}`,
                     label: `${t.employee_name} [${t.designation || "Field Technician"}] - ${t.technician_certification || "Certified"}`,
                     fieldtype: "Check"
                 });
                 dialog_fields.push({
-                    fieldname: `role_${t.employee}`,
+                    fieldname: `role_${safe_id}`,
                     label: `Role for ${t.employee_name}`,
                     fieldtype: "Select",
                     options: "Lead Technician\nAssistant Technician\nChemical Sprayer\nQuality Inspector",
                     default: idx === 0 ? "Lead Technician" : "Assistant Technician",
-                    depends_on: `eval:doc.select_${t.employee} == 1`
+                    depends_on: `eval:doc.select_${safe_id} == 1`
                 });
             });
 
@@ -123,10 +124,11 @@ function open_allocation_dialog(frm) {
                 primary_action: (values) => {
                     let assignments = [];
                     techs.forEach(t => {
-                        if (values[`select_${t.employee}`]) {
+                        const safe_id = t.employee.replace(/[^a-zA-Z0-9_]/g, '_');
+                        if (values[`select_${safe_id}`]) {
                             assignments.push({
                                 employee: t.employee,
-                                role: values[`role_${t.employee}`] || "Lead Technician"
+                                role: values[`role_${safe_id}`] || "Lead Technician"
                             });
                         }
                     });
