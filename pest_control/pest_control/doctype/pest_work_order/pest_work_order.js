@@ -2,6 +2,35 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Pest Work Order", {
+    site(frm) {
+        if (frm.doc.site) {
+            frappe.db.get_value("Pest Control Site", frm.doc.site, "area_sqft", (r) => {
+                if (r && r.area_sqft) {
+                    frm.set_value("area_sqft", r.area_sqft);
+                }
+            });
+        }
+    },
+
+    service_type(frm) {
+        if (frm.doc.service_type) {
+            frappe.db.get_value("Service Type", frm.doc.service_type, "standard_rate", (r) => {
+                if (r && r.standard_rate) {
+                    frm.set_value("service_rate", r.standard_rate);
+                    if (!frm.doc.billing_amount || frm.doc.billing_amount === 0) {
+                        frm.set_value("billing_amount", r.standard_rate);
+                    }
+                }
+            });
+        }
+    },
+
+    service_rate(frm) {
+        if (!frm.doc.billing_amount && frm.doc.service_rate) {
+            frm.set_value("billing_amount", frm.doc.service_rate);
+        }
+    },
+
     refresh(frm) {
         // Status indicator badges
         frm.page.set_indicator(

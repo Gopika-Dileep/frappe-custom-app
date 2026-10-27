@@ -43,7 +43,8 @@
    "fieldname": "rate_per_visit",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Rate Per Visit"
+   "label": "Rate Per Visit",
+   "fetch_from": "service_type.standard_rate"
   },
   {
    "fieldname": "total_service_amount",

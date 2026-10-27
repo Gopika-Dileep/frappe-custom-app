@@ -8,12 +8,17 @@ from frappe import _
 
 class PestControlContract(Document):
     def validate(self):
+        if self.site and not self.area_sqft:
+            self.area_sqft = frappe.db.get_value("Pest Control Site", self.site, "area_sqft") or 0.0
+
         if self.end_date and self.start_date and getdate(self.end_date) < getdate(self.start_date):
             frappe.throw(_("End Date cannot be before Start Date"))
             
         # Calculate total contract amount from services
         total = 0
         for s in self.services:
+            if not s.rate_per_visit and s.service_type:
+                s.rate_per_visit = frappe.db.get_value("Service Type", s.service_type, "standard_rate") or 0.0
             if s.rate_per_visit and s.visits_per_year:
                 s.total_service_amount = s.rate_per_visit * s.visits_per_year
                 total += s.total_service_amount
@@ -42,17 +47,22 @@ class PestControlContract(Document):
                 if getdate(visit_date) > getdate(self.end_date):
                     break
 
+                rate = s.rate_per_visit or frappe.db.get_value("Service Type", s.service_type, "standard_rate") or 0.0
+
                 wo = frappe.get_doc({
                     "doctype": "Pest Work Order",
                     "customer": self.customer,
                     "site": self.site,
+                    "area_sqft": self.area_sqft or frappe.db.get_value("Pest Control Site", self.site, "area_sqft") or 0.0,
                     "contract": self.name,
                     "service_type": s.service_type,
+                    "service_rate": rate,
+                    "billing_amount": rate,
                     "scheduled_date": visit_date,
                     "time_slot": "Morning (08:00 - 12:00)",
                     "priority": "Standard",
                     "status": "Draft",
-                    "service_notes": f"Contract Visit #{i+1} for {s.service_type}"
+                    "supervisor_notes": f"Contract Visit #{i+1} of {num_visits} for {s.service_type}"
                 })
                 wo.insert(ignore_permissions=True)
                 created_orders.append(wo.name)
