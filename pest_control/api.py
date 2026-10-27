@@ -17,7 +17,8 @@ def get_available_technicians(date, time_slot, service_type=None):
     if not date or not time_slot:
         return []
 
-    # 1. Base Pool: Active Employees
+    # 1. Base Pool: Active Field Operations Technicians
+    # Exclude non-field staff such as HR Managers, Accounts, etc.
     employees = frappe.db.sql("""
         SELECT 
             name as employee,
@@ -29,6 +30,12 @@ def get_available_technicians(date, time_slot, service_type=None):
             pesticide_license_no
         FROM `tabEmployee`
         WHERE status = 'Active'
+          AND (
+              designation LIKE '%Technician%' 
+              OR designation LIKE '%Specialist%'
+              OR technician_certification IS NOT NULL
+          )
+          AND (designation IS NULL OR designation NOT IN ('HR Manager', 'Accountant', 'Finance Manager'))
         ORDER BY employee_name ASC
     """, as_dict=True)
 

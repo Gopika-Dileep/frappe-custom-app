@@ -103,7 +103,7 @@ function open_allocation_dialog(frm) {
             techs.forEach((t, idx) => {
                 dialog_fields.push({
                     fieldname: `select_${t.employee}`,
-                    label: `${t.employee_name} (${t.technician_certification || "Certified Technician"}) - ${t.cell_number || "No Phone"}`,
+                    label: `${t.employee_name} [${t.designation || "Field Technician"}] - ${t.technician_certification || "Certified"}`,
                     fieldtype: "Check"
                 });
                 dialog_fields.push({
